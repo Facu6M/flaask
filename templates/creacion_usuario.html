@@ -1,0 +1,85 @@
+{% extends "index.html" %}
+{% block body %}
+
+    <form id="formulario" class="formulario" action="/add_user" method="POST">
+        <!-- Grupo: Usuario -->
+        <div class="formulario__grupo" id="grupo__usuario">
+            <label for="usuario" class="formulario__label">Nombre de Usuario</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="username"  id="usuario" placeholder="john123">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">The username must be from 4 to 16 digits and can only contain numbers, letters and underscores.</p>
+        </div>
+
+        <!-- Grupo: Nombre -->
+        <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label">Name</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="name" id="nombre" placeholder="John ">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">The name must be from 4 to 16 digits and can only contain numbers, letters and underscores.</p>
+        </div>
+
+        <!-- Grupo: Last Name -->
+        <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label">LastName</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="surname" id="nombre" placeholder="John ">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">The Lastname must be from 4 to 16 digits and can only contain numbers, letters and underscores.</p>
+        </div>
+
+        <!-- Grupo: Contraseña -->
+        <div class="formulario__grupo" id="grupo__password">
+            <label for="password" class="formulario__label">Password</label>
+            <div class="formulario__grupo-input">
+                <input type="password" class="formulario__input" name="password" id="password" placeholder="********">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">The password has to be 4 to 12 digits.</p>
+        </div>
+
+        <!-- Grupo: Correo Electronico -->
+        <div class="formulario__grupo" id="grupo__correo">
+            <label for="correo" class="formulario__label">Email</label>
+            <div class="formulario__grupo-input">
+                <input type="email" class="formulario__input" name="email" id="correo" placeholder="correo@correo.com">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Email can only contain letters, numbers, periods, hyphens and underscores.</p>
+        </div>
+
+        <!-- Grupo: Teléfono -->
+        <div class="formulario__grupo" id="grupo__telefono">
+            <label for="telefono" class="formulario__label">Phone</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="phone" id="telefono" placeholder="4491234567">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">The phone can only contain numbers and the maximum is 14 digits.</p>
+        </div>
+
+        <!-- Grupo: Terminos y Condiciones -->
+        <div class="formulario__grupo" id="grupo__terminos">
+            <label class="formulario__label">
+                <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos" required>
+                I accept the terms and conditions
+            </label>
+        </div>
+
+        <div class="formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Please fill in the form correctly. </p>
+        </div>
+
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn button">Send</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Form sent successfully!</p>
+        </div>
+    </form>
+
+
+
+{% endblock %}

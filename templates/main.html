@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block cm %}
+<section>
+<p>Felicidades, Iniciaste sesion</p>
+
+{% for user in usuarios %}
+<br>
+<p>Estos son tus datos</p>
+
+<p>Nombre de ususario: {{user.1}} </p>
+<p>Nombre: {{user.2}} </p>
+<p>Apellido: {{user.3}} </p>
+<p>Email: {{user.4}} </p>
+<p>Telefono: {{user.6}} </p>
+</section>
+  {% endfor %}
+  {% endblock %}
