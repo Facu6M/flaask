@@ -56,17 +56,20 @@ def iniciar():
     password = request.args.get("password")
     conjunto = email + " " + password
     cur1 = mysql.connection.cursor()
-    cur1.execute("SELECT email,password FROM user ")
+    cur1.execute("SELECT email,password FROM user")
     datas = cur1.fetchall()
     for i in datas:
-        string = ' '.join(i)
-        if conjunto == string:
-         cur = mysql.connection.cursor()
-         cur.execute("SELECT * FROM user WHERE email = %s", [email])
-         datos = cur.fetchall()
-         return render_template("main.html", usuarios = datos)
+        str = ' '.join(i)
+        print(str)
+        if conjunto == str:
+            cur = mysql.connection.cursor()
+            cur.execute("SELECT * FROM user WHERE email = %s", [email])
+            datos = cur.fetchall()
+            return render_template("main.html", usuarios = datos)
+            print("es igual")
+
         else:
-         return render_template("error_sesion.html")
+            print("noes igual")
     return render_template("iniciar_sesion.html")
 
 
@@ -80,6 +83,7 @@ def delete_contact(id):
     cur.execute("DELETE FROM gastos WHERE id = {0}".format(id))
     mysql.connection.commit()
     return redirect(url_for("Index"))
+
 
 port = int(os.environ.get('PORT', 5000))
 
