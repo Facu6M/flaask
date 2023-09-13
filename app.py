@@ -4,10 +4,10 @@ import os
 
 
 app = Flask(__name__)
-app.config["MYSQL_HOST"]= "bofirw429yk1vjx5lqak-mysql.services.clever-cloud.com"
-app.config["MYSQL_USER"]= "ugvo3vtnsufnbbuy"
-app.config["MYSQL_PASSWORD"]= "7c2Lv6bY2tbn3zC4YuG2"
-app.config["MYSQL_DB"]= "bofirw429yk1vjx5lqak"
+app.config["MYSQL_HOST"]= "asd"
+app.config["MYSQL_USER"]= "as"
+app.config["MYSQL_PASSWORD"]= "a"
+app.config["MYSQL_DB"]= "d"
 mysql = MySQL(app)
 
 app.secret_key = "facu22"
